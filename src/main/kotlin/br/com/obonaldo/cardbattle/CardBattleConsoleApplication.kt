@@ -1,11 +1,14 @@
 package br.com.obonaldo.cardbattle
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+import br.com.obonaldo.cardbattle.domain.Game
+import br.com.obonaldo.cardbattle.domain.Player
 
-@SpringBootApplication
-class CardBattleConsoleApplication 
+class CardBattleConsoleApplication
 
 fun main(args: Array<String>) {
-	runApplication<CardBattleConsoleApplication>(*args)
+  val game = Game(
+      Player("daniel"),
+      Player("tati"))
+
+  game.run()
 }
